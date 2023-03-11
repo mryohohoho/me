@@ -1,0 +1,381 @@
+<!doctype html><html lang=zh-cn data-theme=light><head><meta charset=utf-8><meta name=viewport content="width=device-width"><meta name=theme-color content="#222" media="(prefers-color-scheme: light)"><meta name=generator content="Hugo 0.111.2"><link rel="shortcut icon" type=image/x-icon href=/imgs/icons/favicon.ico><link rel=icon type=image/x-icon href=/imgs/icons/favicon.ico><link rel=icon type=image/png sizes=16x16 href=/imgs/icons/favicon_16x16_next.png><link rel=icon type=image/png sizes=32x32 href=/imgs/icons/favicon_32_32_next.png><link rel=apple-touch-icon sizes=180x180 href=/imgs/icons/apple_touch_icon_next.png><meta itemprop=name content="Datastruct"><meta itemprop=description content="datastruct"><meta itemprop=datePublished zgotmplz><meta itemprop=dateModified zgotmplz><meta itemprop=image content="http://mryohohoho.github.io/imgs/hugo_next_avatar.png"><meta itemprop=keywords content=","><meta property="og:type" content="article"><meta property="og:title" content="Datastruct"><meta property="og:description" content="datastruct"><meta property="og:image" content="/imgs/hugo_next_avatar.png"><meta property="og:image:width" content="312"><meta property="og:image:height" content="312"><meta property="og:image:type" content="image/jpeg/png/svg/jpg"><meta property="og:url" content="http://mryohohoho.github.io/me/post/datastruct/"><meta property="og:site_name" content="小郭同学"><meta property="og:locale" content="zh-CN"><meta property="article:author" content="mryohohoho"><meta property="article:published_time" content="2023-03-10 22:39:41 +0800 CST"><meta property="article:modified_time" content="2023-03-10 22:39:41 +0800 CST"><link type=text/css rel=stylesheet href=https://cdn.staticfile.org/font-awesome/6.1.2/css/all.min.css><link type=text/css rel=stylesheet href=https://cdn.staticfile.org/animate.css/3.1.1/animate.min.css><link type=text/css rel=stylesheet href=https://cdn.staticfile.org/viewerjs/1.11.0/viewer.min.css><link rel=stylesheet href=/me/css/main.min.420714daf83f176e8e91e727a93e1e07893d946e130c1c03f3f994ce2c554649.css><style type=text/css>.post-footer,.flinks-list-footer hr:after{content:"~ 我可是有底线的哟 ~"}</style><script type=text/javascript>(function(){localDB={set:function(e,t,n){if(n===0)return;const s=new Date,o=n*864e5,i={value:t,expiry:s.getTime()+o};localStorage.setItem(e,JSON.stringify(i))},get:function(e){const t=localStorage.getItem(e);if(!t)return void 0;const n=JSON.parse(t),s=new Date;return s.getTime()>n.expiry?(localStorage.removeItem(e),void 0):n.value}},theme={active:function(){const e=localDB.get("theme");if(e==null)return;theme.toggle(e),window.matchMedia("(prefers-color-scheme: dark)").addListener(function(e){theme.toggle(e.matches?"dark":"light")})},toggle:function(e){document.documentElement.setAttribute("data-theme",e),localDB.set("theme",e,2);const t=document.querySelector("iframe.giscus-frame");if(t){const n={setConfig:{theme:e}};t.contentWindow.postMessage({giscus:n},"https://giscus.app")}}},theme.active()})(window)</script><script class=next-config data-name=page type=application/json>{"comments":false,"isHome":false,"isPage":true,"path":"datastruct","permalink":"http://mryohohoho.github.io/me/post/datastruct/","title":"Datastruct","waline":{"js":[{"alias":"waline","alias_name":"@waline/client","file":"dist/pageview.js","name":"pageview","version":"2.13.0"},{"alias":"waline","alias_name":"@waline/client","file":"dist/comment.js","name":"comment","version":"2.13.0"}]}}</script><script type=text/javascript>document.addEventListener("DOMContentLoaded",()=>{var e=document.createElement("script");e.charset="UTF-8",e.src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js",e.async=!1,e.defer=!0,document.head.appendChild(e),e.onload=function(){NexT.utils.fmtBusuanzi()}})</script><title>Datastruct - 小郭同学</title><noscript><link rel=stylesheet href=/css/noscript.css></noscript></head><body itemscope itemtype=http://schema.org/WebPage class=use-motion><div class=headband></div><main class=main><header class=header itemscope itemtype=http://schema.org/WPHeader><div class=header-inner><div class=site-brand-container><div class=site-nav-toggle><div class=toggle aria-label=切换导航栏 role=button><span class=toggle-line></span>
+<span class=toggle-line></span>
+<span class=toggle-line></span></div></div><div class=site-meta><a href=/ class=brand rel=start><i class=logo-line></i><h1 class=site-title>小郭同学</h1><i class=logo-line></i></a><p class=site-subtitle itemprop=description>想成为一名快乐的技术宅</p></div><div class=site-nav-right><div class="toggle popup-trigger"><i class="fa fa-search fa-fw fa-lg"></i></div></div></div><nav class=site-nav><ul class="main-menu menu"><li class="menu-item menu-item-home"><a href=/me/ class=hvr-icon-pulse rel=section><i class="fa fa-home hvr-icon"></i>首页</a></li><li class="menu-item menu-item-about"><a href=/me/about.html class=hvr-icon-pulse rel=section><i class="fa fa-user hvr-icon"></i>关于</a></li><li class="menu-item menu-item-archives"><a href=/me/archives/ class=hvr-icon-pulse rel=section><i class="fa fa-archive hvr-icon"></i>归档
+<span class=badge>1</span></a></li><li class="menu-item menu-item-search"><a role=button class="popup-trigger hvr-icon-pulse"><i class="fa fa-search fa-fw hvr-icon"></i>搜索</a></li></ul></nav><div class=search-pop-overlay><div class="popup search-popup"><div class=search-header><span class=search-icon><i class="fa fa-search"></i></span><div class=search-input-container><input autocomplete=off autocapitalize=off maxlength=80 placeholder=搜索... spellcheck=false type=search class=search-input></div><span class=popup-btn-close role=button><i class="fa fa-times-circle"></i></span></div><div class="search-result-container no-result"><div class=search-result-icon><i class="fa fa-spinner fa-pulse fa-5x"></i></div></div></div></div></div><div class="toggle sidebar-toggle" role=button><span class=toggle-line></span>
+<span class=toggle-line></span>
+<span class=toggle-line></span></div><aside class=sidebar><div class="sidebar-inner sidebar-overview-active"><ul class=sidebar-nav><li class=sidebar-nav-toc>文章目录</li><li class=sidebar-nav-overview>站点概览</li></ul><div class=sidebar-panel-container><div class="post-toc-wrap sidebar-panel"><div class="post-toc animated"><nav id=TableOfContents><ul><li><a href=#part1-线性表栈队列>part1 线性表、栈、队列</a><ul><li><a href=#11线性表>1.1线性表</a></li></ul></li><li><a href=#part2-kmp>part2 KMP</a></li><li><a href=#part3-树>part3 树</a><ul><li><a href=#31二叉树遍历>3.1二叉树遍历</a></li><li><a href=#32线索二叉树>3.2线索二叉树</a></li><li><a href=#33二叉排序树与平衡二叉树>3.3二叉排序树与平衡二叉树</a></li></ul></li><li><a href=#part4-图>part4 图</a><ul><li><a href=#41图的遍历>4.1图的遍历</a></li></ul></li><li><a href=#part5-查找排序>part5 查找、排序</a></li></ul></nav></div></div><div class="site-overview-wrap sidebar-panel"><div class="site-author site-overview-item animated" itemprop=author itemscope itemtype=http://schema.org/Person><img class=site-author-image itemprop=image alt=mryohohoho src=/imgs/img-lazy-loading.gif data-src=/imgs/hugo_next_avatar.png><p class=site-author-name itemprop=name>mryohohoho</p><div class=site-description itemprop=description>努力转码的建筑生。</div></div><div class="site-state-wrap site-overview-item animated"><nav class=site-state><div class="site-state-item site-state-posts"><a href=/archives/><span class=site-state-item-count>1</span>
+<span class=site-state-item-name>日志</span></a></div><div class="site-state-item site-state-categories"><a href=/categories/><span class=site-state-item-count>0</span>
+<span class=site-state-item-name>分类</span></a></div><div class="site-state-item site-state-tags"><a href=/tags/><span class=site-state-item-count>0</span>
+<span class=site-state-item-name>标签</span></a></div></nav></div><div class="links-of-social site-overview-item animated"><span class=links-of-social-item><a href=https://github.com/mryohohoho title="Github → https://github.com/mryohohoho" rel=noopener class=hvr-icon-pulse target=_blank><i class="fab fa-github fa-fw hvr-icon"></i>Github</a></span>
+<span class=links-of-social-item><a href=mailto:guorunpeng@hotmail.com title="E-Mail → mailto:guorunpeng@hotmail.com" rel=noopener class=hvr-icon-pulse target=_blank><i class="fa fa-envelope fa-fw hvr-icon"></i>E-Mail</a></span></div><div class="cc-license animated" itemprop=license><a href=https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh class=cc-opacity rel=noopener target=_blank title=共享知识><img src=/imgs/img-lazy-loading.gif data-src=/imgs/cc/big/by_nc_sa.svg alt=共享知识></a></div></div></div></div><div id=siteinfo-card-widget class=sidebar-card-widget><div class=item-headline><i class="fas fa-chart-line"></i>
+<span>网站资讯</span></div><div class=siteinfo><div class=siteinfo-item><div class=item-name><i class="fa-solid fa-calendar-check"></i>已运行：</div><div class=item-count id=runTimes data-publishdate=2023-03-10T22:39:41+08:00></div></div><div class=siteinfo-item><div class=item-name><i class="fas fa fa-user"></i>总访客数：</div><div class=item-count id=busuanzi_value_site_uv><i class="fa fa-sync fa-spin"></i></div></div><div class=siteinfo-item><div class=item-name><i class="fas fa fa-eye"></i>页面浏览：</div><div class=item-count id=busuanzi_value_site_pv><i class="fa fa-sync fa-spin"></i></div></div><div class=siteinfo-item><div class=item-name><i class="fa fa-font"></i>总字数：</div><div class=item-count id=wordsCount data-count=3103></div></div><div class=siteinfo-item><div class=item-name><i class="fa fa-mug-hot"></i>阅读约：</div><div class=item-count id=readTimes data-times=7></div></div><div class=siteinfo-item><div class=item-name><i class="fa fa-clock-rotate-left"></i>最后更新于：</div><div class=item-count id=last-push-date data-lastpushdate=2023-03-10T22:39:41+08:00></div></div></div></div></aside><div class=sidebar-dimmer></div></header><div class=tool-buttons><div id=goto-gtranslate class=button title=多语言翻译><i class="fas fa-globe"></i></div><div id=toggle-theme class=button title=深浅模式切换><i class="fas fa-adjust"></i></div><div class=back-to-top role=button title=返回顶部><i class="fa fa-arrow-up"></i>
+<span>0%</span></div></div><div class=reading-progress-bar></div><a role=button class="book-mark-link book-mark-link-fixed"></a>
+<a href=https://github.com/mryohohoho rel="noopener external nofollow noreferrer" target=_blank title="Follow me on GitHub" class="exturl github-corner"><svg width="80" height="80" viewBox="0 0 250 250" aria-hidden="true"><path d="M0 0 115 115h15l12 27L250 250V0z"/><path d="M128.3 109C113.8 99.7 119 89.6 119 89.6 122 82.7 120.5 78.6 120.5 78.6 119.2 72 123.4 76.3 123.4 76.3 127.3 80.9 125.5 87.3 125.5 87.3 122.9 97.6 130.6 101.9 134.4 103.2" fill="currentcolor" style="transform-origin:130px 106px" class="octo-arm"/><path d="M115 115C114.9 115.1 118.7 116.5 119.8 115.4l13.9-13.8C136.9 99.2 139.9 98.4 142.2 98.6 133.8 88 127.5 74.4 143.8 58 148.5 53.4 154 51.2 159.7 51 160.3 49.4 163.2 43.6 171.4 40.1 171.4 40.1 176.1 42.5 178.8 56.2 183.1 58.6 187.2 61.8 190.9 65.4 194.5 69 197.7 73.2 200.1 77.6 213.8 80.2 216.3 84.9 216.3 84.9 212.7 93.1 206.9 96 205.4 96.6 205.1 102.4 203 107.8 198.3 112.5 181.9 128.9 168.3 122.5 157.7 114.1 157.9 116.9 156.7 120.9 152.7 124.9L141 136.5C139.8 137.7 141.6 141.9 141.8 141.8z" fill="currentcolor" class="octo-body"/></svg></a><script type=text/javascript src=//sidecar.gitter.im/dist/sidecar.v1.js async></script>
+<script type=text/javascript>((window.gitter={}).chat={}).options={room:"hugo-next/community"}</script><noscript><div class=noscript-warning>Theme NexT works best with JavaScript enabled</div></noscript><div class="main-inner post posts-expand"><div class=post-block><article itemscope itemtype=http://schema.org/Article class=post-content lang><link itemprop=mainEntityOfPage href=http://mryohohoho.github.io/me/post/datastruct/><span hidden itemprop=author itemscope itemtype=http://schema.org/Person><meta itemprop=image content="/imgs/hugo_next_avatar.png"><meta itemprop=name content="mryohohoho"></span><span hidden itemprop=publisher itemscope itemtype=http://schema.org/Organization><meta itemprop=name content="mryohohoho"><meta itemprop=description content="努力转码的建筑生。"></span><span hidden itemprop=post itemscope itemtype=http://schema.org/CreativeWork><meta itemprop=name content="Datastruct"><meta itemprop=description content="datastruct"></span><header class=post-header><h1 class=post-title itemprop="name headline"><span class=post-sticky-flag title=置顶><i class="fa fa-thumbtack"></i>
+</span>Datastruct</h1><div class=post-meta-container><div class=post-meta-items><span class=post-meta-item><span class=post-meta-item-icon><i class="far fa-calendar"></i></span>
+<span class=post-meta-item-text>发表于：</span>
+<time title="发表于：2023-03-10 22:39:41 +0800 CST" itemprop="dateCreated datePublished" datetime="2023-03-10 22:39:41 +0800 CST">2023-03-10</time></span>
+<span class=post-meta-item><span class=post-meta-item-icon><i class="far fa-folder-open"></i></span>
+<span class=post-meta-item-text>分类于：</span>
+<span itemprop=about itemscope itemtype=http://schema.org/Thing><a href=/categories/ itemprop=url rel=index><span itemprop=name></span></a></span></span></div><div class=post-meta-items><span class=post-meta-item title=字数><span class=post-meta-item-icon><i class="far fa-file-word"></i></span>
+<span class=post-meta-item-text>字数：</span><span>3103</span></span>
+<span class=post-meta-item title=阅读><span class=post-meta-item-icon><i class="far fa-clock"></i></span>
+<span class=post-meta-item-text>阅读：&ap;</span>
+<span>7分钟</span></span>
+<span class=post-meta-item title=浏览><span class=post-meta-item-icon><i class="far fa-eye"></i></span>
+<span class=post-meta-item-text>浏览：</span>
+<span id=busuanzi_value_page_pv class=waline-pageview-count data-path=/me/post/datastruct/><i class="fa fa-sync fa-spin"></i></span></span></div></div></header><div class=post-body itemprop=articleBody><h1 id=数据结构笔记>数据结构笔记</h1><hr><p>二叉树已更新完毕</p><toc><h1 id=基础算法汇总>基础算法汇总</h1><h2 id=part1-线性表栈队列>part1 线性表、栈、队列</h2><h3 id=11线性表>1.1线性表</h3><ol><li><strong>顺序表插入元素操作</strong>
+//初始条件：顺序线性表 L 已存在， 1 ≤ i ≤ ListLength(L)
+//操作结果：在 L 中第 i 个位置之前插入新的数据元素 e,L 的长度加 1</li></ol><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:2;-o-tab-size:2;tab-size:2><code class=language-c data-lang=c><span style=display:flex><span><span style=color:#66d9ef>int</span> <span style=color:#a6e22e>ListInsert</span>(SeqList <span style=color:#f92672>*</span>L,<span style=color:#66d9ef>int</span> i,ElemType <span style=color:#f92672>*</span>e){
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>int</span> k;
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>if</span>(L<span style=color:#f92672>-&gt;</span>length <span style=color:#f92672>==</span> MAXSIZE) <span style=color:#75715e>//顺序线性表已经满
+</span></span></span><span style=display:flex><span><span style=color:#75715e></span>        <span style=color:#66d9ef>return</span> ERROR;
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>if</span> (i<span style=color:#f92672>&lt;</span><span style=color:#ae81ff>1</span> <span style=color:#f92672>||</span> i<span style=color:#f92672>&gt;</span>L<span style=color:#f92672>-&gt;</span>length<span style=color:#f92672>+</span> <span style=color:#ae81ff>1</span>) <span style=color:#75715e>//当 i 不在范围内时 
+</span></span></span><span style=display:flex><span><span style=color:#75715e></span>        <span style=color:#66d9ef>return</span> ERROR;
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>if</span>( i<span style=color:#f92672>&lt;=</span>L<span style=color:#f92672>-&gt;</span>length) {<span style=color:#75715e>//若插入数据位置不在表尾
+</span></span></span><span style=display:flex><span><span style=color:#75715e></span>        <span style=color:#75715e>//将要插入位置后 的 数据元素向后动一位
+</span></span></span><span style=display:flex><span><span style=color:#75715e></span>        <span style=color:#66d9ef>for</span>(k<span style=color:#f92672>=</span>L<span style=color:#f92672>-&gt;</span>length <span style=color:#f92672>+</span> <span style=color:#ae81ff>1</span>; k <span style=color:#f92672>&gt;=</span> i <span style=color:#f92672>-</span> <span style=color:#ae81ff>1</span>; k<span style=color:#f92672>--</span>) 
+</span></span><span style=display:flex><span>            L <span style=color:#f92672>-&gt;</span>data[k<span style=color:#f92672>+</span><span style=color:#ae81ff>1</span>]<span style=color:#f92672>=</span>L<span style=color:#f92672>-&gt;</span>data[k];
+</span></span><span style=display:flex><span>    }
+</span></span><span style=display:flex><span>    L <span style=color:#f92672>-&gt;</span>data[i<span style=color:#f92672>+</span><span style=color:#ae81ff>1</span>]<span style=color:#f92672>=</span>e;<span style=color:#75715e>//将新元素插入
+</span></span></span><span style=display:flex><span><span style=color:#75715e></span>    L<span style=color:#f92672>-&gt;</span>length <span style=color:#f92672>++</span>;
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>return</span> OK;
+</span></span><span style=display:flex><span>}
+</span></span></code></pre></div><p>在上述代码中，核心语句为for 循环里面的判断，对顺序表进行插入操作，应该先进
+行位置移动，然后才能进行插入操 作。<strong>所以顺序线性表的插入，时间复杂度为 O(n)</strong>。</p><ol start=2><li><strong>顺序表按位删除元素操作</strong>
+初始条件： 顺序线性表 L 已存在， 1 ≤ i ≤ List.Length(L)
+操作结果：删除 L 的第 i 个数据元素，并用 e 返回其值， L 的长度减 1</li></ol><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:2;-o-tab-size:2;tab-size:2><code class=language-c data-lang=c><span style=display:flex><span><span style=color:#66d9ef>int</span> <span style=color:#a6e22e>ListDelete</span>(SqList <span style=color:#f92672>*</span>L,<span style=color:#66d9ef>int</span> i,ElemType <span style=color:#f92672>*</span>e){
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>int</span> k;
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>if</span> (L<span style=color:#f92672>-&gt;</span>length <span style=color:#f92672>==</span> <span style=color:#ae81ff>0</span>)<span style=color:#75715e>//线性表为空
+</span></span></span><span style=display:flex><span><span style=color:#75715e></span>        <span style=color:#66d9ef>return</span> ERROR;
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>if</span>(i<span style=color:#f92672>&lt;</span><span style=color:#ae81ff>1</span><span style=color:#f92672>||</span> i<span style=color:#f92672>&gt;</span>L <span style=color:#f92672>-&gt;</span>length) <span style=color:#75715e>//删除位置不正确
+</span></span></span><span style=display:flex><span><span style=color:#75715e></span>        <span style=color:#66d9ef>return</span> ERROR;
+</span></span><span style=display:flex><span>    <span style=color:#f92672>*</span>e<span style=color:#f92672>=</span>L<span style=color:#f92672>-&gt;</span>data[i<span style=color:#f92672>-</span><span style=color:#ae81ff>1</span>];
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>if</span>(i <span style=color:#f92672>!=</span> L<span style=color:#f92672>-&gt;</span>length  <span style=color:#f92672>+</span><span style=color:#ae81ff>1</span>){ <span style=color:#75715e>//如果删除不是最后位置
+</span></span></span><span style=display:flex><span><span style=color:#75715e></span>        <span style=color:#66d9ef>for</span> (k<span style=color:#f92672>=</span>i;k<span style=color:#f92672>&lt;</span> L<span style=color:#f92672>-&gt;</span>length;k<span style=color:#f92672>++</span>) <span style=color:#960050;background-color:#1e0010>将删除位置后继元素前移</span>
+</span></span><span style=display:flex><span>        L<span style=color:#f92672>-&gt;</span>data[k<span style=color:#f92672>-</span><span style=color:#ae81ff>1</span>]<span style=color:#f92672>=</span>L<span style=color:#f92672>-&gt;</span>data[k];
+</span></span><span style=display:flex><span>    L <span style=color:#f92672>-&gt;</span>length<span style=color:#f92672>--:</span>
+</span></span><span style=display:flex><span>    }
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>return</span> OK;
+</span></span><span style=display:flex><span>}
+</span></span></code></pre></div><p>该删除算法关键步骤是：从删除元素位置开始遍历到最后一个元素位置，分别依次将它
+们向前移动一个位置，然后对第 i 个元素进行删除。 因为<strong>在进行删除之前还需要一次跟插入一样的移动操作，故删除的平均算法时间也为 O(n)</strong>。
+3. <strong>单链表按位查找</strong>
+初始条件：顺序线性表已存在， 1≤i≤ListLength(L)
+操作结果：用 e 返回表中第 i 个数据元素的值</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:2;-o-tab-size:2;tab-size:2><code class=language-c data-lang=c><span style=display:flex><span><span style=color:#66d9ef>int</span> <span style=color:#a6e22e>GetElem</span>(LinkList L,<span style=color:#66d9ef>int</span> i,ElemType <span style=color:#f92672>*</span>e){
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>int</span> j<span style=color:#f92672>=</span><span style=color:#ae81ff>1</span>; <span style=color:#75715e>//j 为计数器
+</span></span></span><span style=display:flex><span><span style=color:#75715e></span>    LinkList <span style=color:#f92672>*</span>p; <span style=color:#75715e>//声明一 节点p
+</span></span></span><span style=display:flex><span><span style=color:#75715e></span>    p<span style=color:#f92672>=</span>L<span style=color:#f92672>-&gt;</span>next; <span style=color:#75715e>//p 指向链表 L 的第一个节点
+</span></span></span><span style=display:flex><span><span style=color:#75715e></span>    <span style=color:#66d9ef>while</span>(p <span style=color:#f92672>&amp;&amp;</span> j<span style=color:#f92672>&lt;</span>i) { <span style=color:#960050;background-color:#1e0010>当</span> p <span style=color:#960050;background-color:#1e0010>不为空</span> <span style=color:#960050;background-color:#1e0010>并且</span> <span style=color:#960050;background-color:#1e0010>计数器</span> <span style=color:#960050;background-color:#1e0010>不</span> <span style=color:#960050;background-color:#1e0010>等于</span> i <span style=color:#960050;background-color:#1e0010>时，循环继续</span>
+</span></span><span style=display:flex><span>        p<span style=color:#f92672>=</span>p<span style=color:#f92672>-&gt;</span>next <span style=color:#75715e>//p 指向下一个 节点
+</span></span></span><span style=display:flex><span><span style=color:#75715e></span>        j<span style=color:#f92672>++</span>;
+</span></span><span style=display:flex><span>    }
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>if</span>(<span style=color:#f92672>!</span>p <span style=color:#f92672>||</span> j <span style=color:#f92672>&gt;</span> i)
+</span></span><span style=display:flex><span>        <span style=color:#66d9ef>return</span> ERROR;
+</span></span><span style=display:flex><span>    <span style=color:#f92672>*</span>e <span style=color:#f92672>=</span> p <span style=color:#f92672>-&gt;</span>data;
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>return</span> OK;
+</span></span><span style=display:flex><span>}
+</span></span></code></pre></div><p><strong>代码题中记得写上容错机制。</strong>
+4. <strong>单链表插入操作</strong>
+初始条件：链表已存在， 1 ≤ i ≤ ListLength L
+操作结果： 链表的在第 i 处插入新元素 e</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:2;-o-tab-size:2;tab-size:2><code class=language-c data-lang=c><span style=display:flex><span><span style=color:#66d9ef>int</span> <span style=color:#a6e22e>ListInsert</span>(LinkList <span style=color:#f92672>*</span>L,<span style=color:#66d9ef>int</span> i,ElemType e){
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>int</span> j<span style=color:#f92672>=</span><span style=color:#ae81ff>1</span><span style=color:#960050;background-color:#1e0010>；</span>
+</span></span><span style=display:flex><span>    LinkList <span style=color:#f92672>*</span>p,<span style=color:#f92672>*</span>s;
+</span></span><span style=display:flex><span>    p<span style=color:#f92672>=</span>L<span style=color:#f92672>-&gt;</span>next;
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>while</span> (p <span style=color:#f92672>&amp;&amp;</span> j<span style=color:#f92672>&lt;</span>i) {<span style=color:#75715e>//寻找第 i 个 节点
+</span></span></span><span style=display:flex><span><span style=color:#75715e></span>        p<span style=color:#f92672>=</span>p <span style=color:#f92672>-&gt;</span> next;
+</span></span><span style=display:flex><span>        j<span style=color:#f92672>++</span>;
+</span></span><span style=display:flex><span>    }
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>if</span> (<span style=color:#f92672>!</span>p <span style=color:#f92672>||</span> j<span style=color:#f92672>&gt;</span>i)
+</span></span><span style=display:flex><span>        <span style=color:#66d9ef>return</span> ERROR; <span style=color:#75715e>//第 i 个元素不存在
+</span></span></span><span style=display:flex><span><span style=color:#75715e></span>    s<span style=color:#f92672>=</span>(LinkList <span style=color:#f92672>*</span>) <span style=color:#a6e22e>malloc</span> (<span style=color:#66d9ef>sizeof</span>(Node)) <span style=color:#75715e>//生成新节点 (C 标准函数）
+</span></span></span><span style=display:flex><span><span style=color:#75715e></span>    s <span style=color:#f92672>-&gt;</span>data<span style=color:#f92672>=</span> e;
+</span></span><span style=display:flex><span>    s <span style=color:#f92672>-&gt;</span>next<span style=color:#f92672>=</span>p <span style=color:#f92672>-&gt;</span>next;<span style=color:#75715e>// 将 p 的后继节点赋值给 s 的后继
+</span></span></span><span style=display:flex><span><span style=color:#75715e></span>    p <span style=color:#f92672>-&gt;</span>next <span style=color:#f92672>=</span> s;<span style=color:#75715e>//将 s 赋值给 p 的后继
+</span></span></span><span style=display:flex><span><span style=color:#75715e></span>    <span style=color:#66d9ef>return</span> OK;
+</span></span><span style=display:flex><span>}
+</span></span></code></pre></div><ol start=5><li><strong>链表逆置</strong>
+方法一：
+算法思想：修改指针即可，head 指针遍历链表不断向前移动，用 p 记录 head的之前的一个节点，修改各个节点指针域 next，指向 p，用一个 temp指针指向（保存）head 的下一个节点。</li></ol><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:2;-o-tab-size:2;tab-size:2><code class=language-c data-lang=c><span style=display:flex><span>ListNode<span style=color:#f92672>*</span> <span style=color:#a6e22e>reverseList</span>(ListNode<span style=color:#f92672>*</span> head){
+</span></span><span style=display:flex><span>    ListNode <span style=color:#f92672>*</span>temp,<span style=color:#f92672>*</span>p <span style=color:#f92672>=</span> NULL;
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>while</span>(head <span style=color:#f92672>!=</span> NULL) {
+</span></span><span style=display:flex><span>        temp <span style=color:#f92672>=</span> head <span style=color:#f92672>-&gt;</span>next;
+</span></span><span style=display:flex><span>        head <span style=color:#f92672>-&gt;</span> next <span style=color:#f92672>=</span>  p;
+</span></span><span style=display:flex><span>        p <span style=color:#f92672>=</span> head;
+</span></span><span style=display:flex><span>        head <span style=color:#f92672>=</span> temp;
+</span></span><span style=display:flex><span>    }
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>return</span> p;
+</span></span><span style=display:flex><span>}
+</span></span></code></pre></div><p>方法二：递归(无头结点代码)</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:2;-o-tab-size:2;tab-size:2><code class=language-c data-lang=c><span style=display:flex><span>ListNode<span style=color:#f92672>*</span> <span style=color:#a6e22e>reverseList</span>(ListNode<span style=color:#f92672>*</span> head){
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>if</span>(head <span style=color:#f92672>==</span> NULL <span style=color:#f92672>||</span> head <span style=color:#f92672>-&gt;</span> next <span style=color:#f92672>==</span> NULL)<span style=color:#75715e>//链表为空or只有一个结点
+</span></span></span><span style=display:flex><span><span style=color:#75715e></span>        <span style=color:#66d9ef>return</span> head;
+</span></span><span style=display:flex><span>    ListNode newhead <span style=color:#f92672>=</span> <span style=color:#a6e22e>reverseList</span>(head <span style=color:#f92672>-&gt;</span> next);<span style=color:#75715e>//递归到链尾
+</span></span></span><span style=display:flex><span><span style=color:#75715e></span>    head<span style=color:#f92672>-&gt;</span>next<span style=color:#f92672>-&gt;</span>next <span style=color:#f92672>=</span> head;<span style=color:#75715e>//反转链表
+</span></span></span><span style=display:flex><span><span style=color:#75715e></span>    head <span style=color:#f92672>-&gt;</span> next <span style=color:#f92672>=</span> NULL;
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>return</span> newhead;<span style=color:#75715e>//newhead始终指向新链表的头
+</span></span></span><span style=display:flex><span><span style=color:#75715e></span>}
+</span></span></code></pre></div><ol start=5><li><strong>逆置循环双链表（含两个以上节点）</strong>
+算法思想：只交换节点中的数据成员 data ，其他的前后指针不变。</li></ol><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:2;-o-tab-size:2;tab-size:2><code class=language-c data-lang=c><span style=display:flex><span><span style=color:#66d9ef>void</span> <span style=color:#a6e22e>Reverse</span> () {
+</span></span><span style=display:flex><span>    <span style=color:#a6e22e>swap</span>(_head_ <span style=color:#f92672>-&gt;</span>_data, _tail_ <span style=color:#f92672>-&gt;</span>_data);
+</span></span><span style=display:flex><span>    LinkList <span style=color:#f92672>*</span> begin <span style=color:#f92672>=</span> _head<span style=color:#f92672>-&gt;</span>next;
+</span></span><span style=display:flex><span>    LinkList <span style=color:#f92672>*</span> end <span style=color:#f92672>=</span> _tail<span style=color:#f92672>-&gt;</span>prev;
+</span></span><span style=display:flex><span>    <span style=color:#75715e>//以上为修正后，替换了以下内容
+</span></span></span><span style=display:flex><span><span style=color:#75715e></span>    <span style=color:#75715e>// LinkList * begin = _head;
+</span></span></span><span style=display:flex><span><span style=color:#75715e></span>    <span style=color:#75715e>// LinkList * end = _tail;
+</span></span></span><span style=display:flex><span><span style=color:#75715e></span>    <span style=color:#66d9ef>while</span> (begin <span style=color:#f92672>!=</span> end <span style=color:#f92672>&amp;&amp;</span> begin <span style=color:#f92672>-&gt;</span>_prev <span style=color:#f92672>!=</span> end)
+</span></span><span style=display:flex><span>    {
+</span></span><span style=display:flex><span>    <span style=color:#a6e22e>swap</span>(begin <span style=color:#f92672>-&gt;</span>_data, end <span style=color:#f92672>-&gt;</span>_data);
+</span></span><span style=display:flex><span>    begin <span style=color:#f92672>=</span> begin <span style=color:#f92672>-&gt;</span>_next;
+</span></span><span style=display:flex><span>    end <span style=color:#f92672>=</span> end <span style=color:#f92672>-&gt;</span>_prev;
+</span></span><span style=display:flex><span>    }
+</span></span><span style=display:flex><span>}
+</span></span></code></pre></div><h2 id=part2-kmp>part2 KMP</h2><h2 id=part3-树>part3 树</h2><h3 id=31二叉树遍历>3.1二叉树遍历</h3><ol><li><strong>先序遍历</strong></li></ol><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:2;-o-tab-size:2;tab-size:2><code class=language-c data-lang=c><span style=display:flex><span><span style=color:#75715e>//递归算法
+</span></span></span><span style=display:flex><span><span style=color:#75715e></span><span style=color:#66d9ef>void</span> <span style=color:#a6e22e>PreOrder</span>(Bitree T){
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>if</span>(T <span style=color:#f92672>!=</span> NULL) {
+</span></span><span style=display:flex><span>        <span style=color:#a6e22e>visit</span>(T);
+</span></span><span style=display:flex><span>        <span style=color:#a6e22e>PreOrder</span>(T<span style=color:#f92672>-&gt;</span>lchild);
+</span></span><span style=display:flex><span>        <span style=color:#a6e22e>PreOrder</span>(T<span style=color:#f92672>-&gt;</span>rchild);
+</span></span><span style=display:flex><span>    }
+</span></span><span style=display:flex><span>}
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#75715e>//非递归算法
+</span></span></span><span style=display:flex><span><span style=color:#75715e></span><span style=color:#66d9ef>void</span> <span style=color:#a6e22e>PreOrder</span>(Bitree T){
+</span></span><span style=display:flex><span>    <span style=color:#a6e22e>InitStack</span>(S);
+</span></span><span style=display:flex><span>    BiTree p <span style=color:#f92672>=</span> T;
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>while</span>(p <span style=color:#f92672>||</span> <span style=color:#f92672>!</span><span style=color:#a6e22e>IsEmpty</span>(S)){
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>if</span> (p){
+</span></span><span style=display:flex><span>        <span style=color:#a6e22e>visit</span>(p);
+</span></span><span style=display:flex><span>        <span style=color:#a6e22e>Push</span>(S,p);
+</span></span><span style=display:flex><span>        p <span style=color:#f92672>=</span> p<span style=color:#f92672>-&gt;</span>rchild;
+</span></span><span style=display:flex><span>    }
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>else</span>{
+</span></span><span style=display:flex><span>        Pop{S,p};
+</span></span><span style=display:flex><span>        p <span style=color:#f92672>=</span> p<span style=color:#f92672>-&gt;</span>lchild;
+</span></span><span style=display:flex><span>    }
+</span></span><span style=display:flex><span>    }
+</span></span><span style=display:flex><span>}
+</span></span></code></pre></div><ol start=2><li><strong>中序遍历</strong></li></ol><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:2;-o-tab-size:2;tab-size:2><code class=language-c data-lang=c><span style=display:flex><span><span style=color:#75715e>//递归算法
+</span></span></span><span style=display:flex><span><span style=color:#75715e></span><span style=color:#66d9ef>void</span> <span style=color:#a6e22e>InOrder</span>(BiTree T){
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>if</span> (T <span style=color:#f92672>!=</span> NULL){
+</span></span><span style=display:flex><span>        <span style=color:#a6e22e>InOrder</span>(T<span style=color:#f92672>-&gt;</span>lchild);
+</span></span><span style=display:flex><span>        <span style=color:#a6e22e>visit</span>(T);
+</span></span><span style=display:flex><span>        <span style=color:#a6e22e>InOrder</span>(T<span style=color:#f92672>-&gt;</span>rchild);
+</span></span><span style=display:flex><span>    }
+</span></span><span style=display:flex><span>}
+</span></span></code></pre></div><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:2;-o-tab-size:2;tab-size:2><code class=language-c data-lang=c><span style=display:flex><span><span style=color:#75715e>//非递归算法
+</span></span></span><span style=display:flex><span><span style=color:#75715e></span><span style=color:#66d9ef>void</span> <span style=color:#a6e22e>InOrder</span>(BiTree T){
+</span></span><span style=display:flex><span>    <span style=color:#a6e22e>InitStack</span>(s);
+</span></span><span style=display:flex><span>    BiTree p <span style=color:#f92672>=</span> T;
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>while</span>(p <span style=color:#f92672>||</span> <span style=color:#a6e22e>IsEmpty</span>(S)){
+</span></span><span style=display:flex><span>        <span style=color:#66d9ef>if</span>(p){
+</span></span><span style=display:flex><span>            <span style=color:#a6e22e>Push</span>(S,p);
+</span></span><span style=display:flex><span>            p <span style=color:#f92672>=</span> p<span style=color:#f92672>-&gt;</span>lchild;
+</span></span><span style=display:flex><span>        }
+</span></span><span style=display:flex><span>        <span style=color:#66d9ef>else</span> {
+</span></span><span style=display:flex><span>            <span style=color:#a6e22e>Pop</span>(S,p);
+</span></span><span style=display:flex><span>            visit p;
+</span></span><span style=display:flex><span>            p <span style=color:#f92672>=</span>  p<span style=color:#f92672>-&gt;</span>rchild;
+</span></span><span style=display:flex><span>        }
+</span></span><span style=display:flex><span>    }
+</span></span><span style=display:flex><span>}
+</span></span></code></pre></div><ol start=3><li><strong>后序遍历</strong></li></ol><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:2;-o-tab-size:2;tab-size:2><code class=language-c data-lang=c><span style=display:flex><span><span style=color:#75715e>//递归算法
+</span></span></span><span style=display:flex><span><span style=color:#75715e></span><span style=color:#66d9ef>void</span> <span style=color:#a6e22e>PostOrder</span>(BiTree T){
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>if</span>(T <span style=color:#f92672>!=</span> NULL){
+</span></span><span style=display:flex><span>        <span style=color:#a6e22e>PostOrder</span>(T<span style=color:#f92672>-&gt;</span>lchild);
+</span></span><span style=display:flex><span>        <span style=color:#a6e22e>PostOrder</span>(T<span style=color:#f92672>-&gt;</span>rchild);
+</span></span><span style=display:flex><span>        <span style=color:#a6e22e>visit</span>(T);
+</span></span><span style=display:flex><span>    }
+</span></span><span style=display:flex><span>}
+</span></span></code></pre></div><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:2;-o-tab-size:2;tab-size:2><code class=language-c data-lang=c><span style=display:flex><span><span style=color:#75715e>//非递归算法
+</span></span></span><span style=display:flex><span><span style=color:#75715e></span><span style=color:#66d9ef>void</span> <span style=color:#a6e22e>PostOrder</span>(BiTree T){
+</span></span><span style=display:flex><span>    <span style=color:#a6e22e>InitStack</span>(S);
+</span></span><span style=display:flex><span>    BiTree p <span style=color:#f92672>=</span> T;
+</span></span><span style=display:flex><span>    BiTree r <span style=color:#f92672>=</span> NULL;
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>while</span> (p <span style=color:#f92672>||</span> <span style=color:#a6e22e>IsEmpty</span>(S)){
+</span></span><span style=display:flex><span>        <span style=color:#66d9ef>if</span> (p){
+</span></span><span style=display:flex><span>            <span style=color:#a6e22e>Push</span>(S,p);
+</span></span><span style=display:flex><span>            p <span style=color:#f92672>=</span> p<span style=color:#f92672>-&gt;</span>lchild;
+</span></span><span style=display:flex><span>        }
+</span></span><span style=display:flex><span>        <span style=color:#66d9ef>else</span> {
+</span></span><span style=display:flex><span>            <span style=color:#a6e22e>GetTop</span>(S,p);
+</span></span><span style=display:flex><span>            <span style=color:#66d9ef>if</span>(p<span style=color:#f92672>-&gt;</span>rchild <span style=color:#f92672>&amp;&amp;</span> p<span style=color:#f92672>-&gt;</span>rchild <span style=color:#f92672>!=</span> r) <span style=color:#75715e>//p的右子树存在，且未被访问过
+</span></span></span><span style=display:flex><span><span style=color:#75715e></span>                p <span style=color:#f92672>=</span> p<span style=color:#f92672>-&gt;</span>rchild;
+</span></span><span style=display:flex><span>            <span style=color:#66d9ef>else</span>{
+</span></span><span style=display:flex><span>                <span style=color:#a6e22e>Pop</span>(S,p);
+</span></span><span style=display:flex><span>                <span style=color:#a6e22e>visit</span>(p);
+</span></span><span style=display:flex><span>                r <span style=color:#f92672>=</span> p; <span style=color:#75715e>//记录最近访问过的结点
+</span></span></span><span style=display:flex><span><span style=color:#75715e></span>                p <span style=color:#f92672>=</span> NULL;<span style=color:#75715e>//结点访问完后，重置p指针
+</span></span></span><span style=display:flex><span><span style=color:#75715e></span>            }
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>        }
+</span></span><span style=display:flex><span>    }
+</span></span><span style=display:flex><span>}
+</span></span></code></pre></div><ol start=4><li><strong>层次遍历</strong></li></ol><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:2;-o-tab-size:2;tab-size:2><code class=language-c data-lang=c><span style=display:flex><span><span style=color:#66d9ef>void</span> <span style=color:#a6e22e>LevelOrder</span>(BiTree T){
+</span></span><span style=display:flex><span>    <span style=color:#a6e22e>InitQueue</span>(S);
+</span></span><span style=display:flex><span>    BiTree p <span style=color:#f92672>=</span> T;
+</span></span><span style=display:flex><span>    <span style=color:#a6e22e>EnQueue</span>(S,p);
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>while</span>(<span style=color:#f92672>!</span><span style=color:#a6e22e>IsEmpty</span>(S)){
+</span></span><span style=display:flex><span>        <span style=color:#a6e22e>DeQueue</span>(S,p);
+</span></span><span style=display:flex><span>        <span style=color:#a6e22e>visit</span>(p);
+</span></span><span style=display:flex><span>        <span style=color:#66d9ef>if</span>(p<span style=color:#f92672>-&gt;</span>lchild)
+</span></span><span style=display:flex><span>        <span style=color:#a6e22e>EnQueue</span>(S,p<span style=color:#f92672>-&gt;</span>lchild);
+</span></span><span style=display:flex><span>        <span style=color:#66d9ef>if</span>(p<span style=color:#f92672>-&gt;</span>rchild)
+</span></span><span style=display:flex><span>        <span style=color:#a6e22e>EnQueue</span>(S,p<span style=color:#f92672>-&gt;</span>rchild);
+</span></span><span style=display:flex><span>    }
+</span></span><span style=display:flex><span>}
+</span></span></code></pre></div><h3 id=32线索二叉树>3.2线索二叉树</h3><ol><li><strong>中序遍历对二叉树线索化（递归）</strong></li></ol><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:2;-o-tab-size:2;tab-size:2><code class=language-c data-lang=c><span style=display:flex><span><span style=color:#66d9ef>void</span> <span style=color:#a6e22e>InThread</span>(ThreadTree <span style=color:#f92672>&amp;</span>p,ThreadTree <span style=color:#f92672>&amp;</span>pre){
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>if</span>(p<span style=color:#f92672>!=</span>NULL){
+</span></span><span style=display:flex><span>        <span style=color:#a6e22e>InThread</span>(p<span style=color:#f92672>-&gt;</span>lchild,pre); <span style=color:#75715e>//递归，线索化左子树
+</span></span></span><span style=display:flex><span><span style=color:#75715e></span>        <span style=color:#66d9ef>if</span>(p<span style=color:#f92672>-&gt;</span>lchild <span style=color:#f92672>==</span> NULL){
+</span></span><span style=display:flex><span>            p<span style=color:#f92672>-&gt;</span>lchild <span style=color:#f92672>=</span> pre;  <span style=color:#75715e>//左子树为空，建立前驱结点
+</span></span></span><span style=display:flex><span><span style=color:#75715e></span>            p<span style=color:#f92672>-&gt;</span>ltag <span style=color:#f92672>=</span> <span style=color:#ae81ff>1</span>;
+</span></span><span style=display:flex><span>        }
+</span></span><span style=display:flex><span>        <span style=color:#66d9ef>if</span>(pre<span style=color:#f92672>!=</span>NULL<span style=color:#f92672>&amp;&amp;</span>pre<span style=color:#f92672>-&gt;</span>rchild  <span style=color:#f92672>==</span> NULL){
+</span></span><span style=display:flex><span>            pre<span style=color:#f92672>-&gt;</span>rchild <span style=color:#f92672>=</span> p; <span style=color:#75715e>//建立前驱结点的后继结点
+</span></span></span><span style=display:flex><span><span style=color:#75715e></span>            pre<span style=color:#f92672>-&gt;</span>rtag <span style=color:#f92672>=</span> <span style=color:#ae81ff>1</span>;
+</span></span><span style=display:flex><span>        }
+</span></span><span style=display:flex><span>        pre <span style=color:#f92672>=</span> p; <span style=color:#75715e>//标记当前结点为刚刚访问过的结点
+</span></span></span><span style=display:flex><span><span style=color:#75715e></span>        <span style=color:#a6e22e>InTread</span>(p<span style=color:#f92672>-&gt;</span>rchild,pre); <span style=color:#75715e>//递归，线索化右子树
+</span></span></span><span style=display:flex><span><span style=color:#75715e></span>    }
+</span></span><span style=display:flex><span>}
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>void</span> <span style=color:#a6e22e>CreateInThread</span>(ThreadTree T){
+</span></span><span style=display:flex><span>    ThreadTree pre <span style=color:#f92672>=</span> NULL;
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>if</span>(T<span style=color:#f92672>!=</span>NULL){    <span style=color:#75715e>//非空二叉树，线索化
+</span></span></span><span style=display:flex><span><span style=color:#75715e></span>        <span style=color:#a6e22e>InThread</span>(T,pre); <span style=color:#75715e>//线索化二叉树
+</span></span></span><span style=display:flex><span><span style=color:#75715e></span>        pre<span style=color:#f92672>-&gt;</span>rchild<span style=color:#f92672>=</span>NULL; <span style=color:#75715e>//处理最后一个结点
+</span></span></span><span style=display:flex><span><span style=color:#75715e></span>        pre<span style=color:#f92672>-&gt;</span>rtag <span style=color:#f92672>=</span> <span style=color:#ae81ff>1</span>;
+</span></span><span style=display:flex><span>    }
+</span></span><span style=display:flex><span>}
+</span></span></code></pre></div><ol start=2><li><strong>中序线索二叉树的遍历</strong>
+在对其遍历时，只需要先找到序列里的第一个结点，然后依次找结点的后继，直到后继为空。
+中序线索二叉树后继的规律是：若其右标志为“1",则为线索，指示其后继，否则遍历右子树种第一个访问的结点（右子树最左下的结点）为其后继。</li></ol><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:2;-o-tab-size:2;tab-size:2><code class=language-c data-lang=c><span style=display:flex><span><span style=color:#75715e>//求中序线索二叉树的中序序列下第一个结点
+</span></span></span><span style=display:flex><span><span style=color:#75715e></span>ThreadNode <span style=color:#f92672>*</span><span style=color:#a6e22e>Firstnode</span>(ThreadNode <span style=color:#f92672>*</span>p){
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>while</span>(p<span style=color:#f92672>-&gt;</span>ltag <span style=color:#f92672>==</span> <span style=color:#ae81ff>0</span>)  p <span style=color:#f92672>=</span> p<span style=color:#f92672>-&gt;</span>lchild; <span style=color:#75715e>//最左下结点（不一定是叶子结点）
+</span></span></span><span style=display:flex><span><span style=color:#75715e></span>    <span style=color:#66d9ef>return</span> p;
+</span></span><span style=display:flex><span>}
+</span></span><span style=display:flex><span><span style=color:#75715e>//求中序线索二叉树种结点p在中序序列下的后继
+</span></span></span><span style=display:flex><span><span style=color:#75715e></span>ThreadNode <span style=color:#f92672>*</span><span style=color:#a6e22e>Nextnode</span>(ThreadNode <span style=color:#f92672>*</span>p){
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>if</span>(p<span style=color:#f92672>-&gt;</span>rtag <span style=color:#f92672>==</span> <span style=color:#ae81ff>0</span>) <span style=color:#66d9ef>return</span> <span style=color:#a6e22e>Firstnode</span>(p<span style=color:#f92672>-&gt;</span>rchild);
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>else</span> <span style=color:#66d9ef>return</span> p<span style=color:#f92672>-&gt;</span>rchild;
+</span></span><span style=display:flex><span>}
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>void</span> <span style=color:#a6e22e>InOrder</span>(ThreadNode <span style=color:#f92672>*</span>T){
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>for</span>(ThreadNode <span style=color:#f92672>*</span>p  <span style=color:#f92672>=</span> <span style=color:#a6e22e>Firstnode</span>(T);p<span style=color:#f92672>!=</span>NULL;p <span style=color:#f92672>=</span> <span style=color:#a6e22e>Nextnode</span>(p))
+</span></span><span style=display:flex><span>    <span style=color:#a6e22e>visit</span>(p);
+</span></span><span style=display:flex><span>}
+</span></span></code></pre></div><h3 id=33二叉排序树与平衡二叉树>3.3二叉排序树与平衡二叉树</h3><ol><li><strong>二叉排序树的插入</strong></li></ol><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:2;-o-tab-size:2;tab-size:2><code class=language-c data-lang=c><span style=display:flex><span><span style=color:#66d9ef>int</span> <span style=color:#a6e22e>BST_Insert</span>(BiTree <span style=color:#f92672>&amp;</span>T,KeyType k){
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>if</span>(T<span style=color:#f92672>==</span>NULL){
+</span></span><span style=display:flex><span>        T <span style=color:#f92672>==</span> (BiTree)<span style=color:#a6e22e>malloc</span>(<span style=color:#66d9ef>sizeof</span>(BSTNode));
+</span></span><span style=display:flex><span>        T <span style=color:#f92672>-&gt;</span> key <span style=color:#f92672>=</span>k;
+</span></span><span style=display:flex><span>        T<span style=color:#f92672>-&gt;</span>lchild <span style=color:#f92672>=</span> T<span style=color:#f92672>-&gt;</span>rchilid <span style=color:#f92672>=</span> NULL;
+</span></span><span style=display:flex><span>        <span style=color:#66d9ef>return</span> <span style=color:#ae81ff>1</span>;  <span style=color:#75715e>//返回1，插入成功
+</span></span></span><span style=display:flex><span><span style=color:#75715e></span>    }
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>else</span> <span style=color:#66d9ef>if</span>(k <span style=color:#f92672>==</span> T<span style=color:#f92672>-&gt;</span>key)    <span style=color:#75715e>//树种存在相同关键字结点，插入失败
+</span></span></span><span style=display:flex><span><span style=color:#75715e></span>        <span style=color:#66d9ef>return</span> <span style=color:#ae81ff>0</span>;
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>else</span> <span style=color:#66d9ef>if</span>(k <span style=color:#f92672>&lt;</span> T<span style=color:#f92672>-&gt;</span>key) <span style=color:#75715e>//插入到左子树
+</span></span></span><span style=display:flex><span><span style=color:#75715e></span>        <span style=color:#66d9ef>return</span> <span style=color:#a6e22e>BST_Insert</span>(T<span style=color:#f92672>-&gt;</span>lchild,k);<span style=color:#75715e>// BST_Insert(T-&gt;lchild,k);
+</span></span></span><span style=display:flex><span><span style=color:#75715e></span>    <span style=color:#66d9ef>else</span>                <span style=color:#75715e>//插入到右子树
+</span></span></span><span style=display:flex><span><span style=color:#75715e></span>        <span style=color:#66d9ef>return</span> <span style=color:#a6e22e>BST_Insert</span>(T<span style=color:#f92672>-&gt;</span>rchild,k);
+</span></span><span style=display:flex><span>}
+</span></span></code></pre></div><ol start=2><li><strong>二叉排序树的构造</strong></li></ol><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:2;-o-tab-size:2;tab-size:2><code class=language-c data-lang=c><span style=display:flex><span><span style=color:#66d9ef>void</span> <span style=color:#a6e22e>Creat_BST</span>(BiTree <span style=color:#f92672>&amp;</span>T,KeyType str[],<span style=color:#66d9ef>int</span> n){
+</span></span><span style=display:flex><span>    T<span style=color:#f92672>=</span>NULL;     <span style=color:#75715e>//初始化T为空树
+</span></span></span><span style=display:flex><span><span style=color:#75715e></span>    <span style=color:#66d9ef>int</span> i <span style=color:#f92672>=</span> <span style=color:#ae81ff>0</span>;
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>while</span>(i <span style=color:#f92672>&lt;</span> n) {  <span style=color:#75715e>//依次将每个关键词插入树中
+</span></span></span><span style=display:flex><span><span style=color:#75715e></span>        <span style=color:#a6e22e>BST_Insert</span>(T,str[i]);
+</span></span><span style=display:flex><span>        i<span style=color:#f92672>++</span>;
+</span></span><span style=display:flex><span>    }
+</span></span><span style=display:flex><span>}
+</span></span></code></pre></div><ol start=3><li><strong>判断二叉树是否为平衡二叉树</strong>
+算法思想：设置二叉树平衡标记balance，标记返回二叉树bt是否为平衡二叉树，若为平衡二叉树则返回1，否则返回0；h为二叉树bt的高度。采用后序遍历递归算法：<ol><li>若bt为空，则高度为0，balance=1；</li><li>若bt仅有根节点，则高度为1，balance=1；</li><li>否则，对bt的左、右边子树执行递归运算，返回左右子树的高度和平衡标记，bt的高度为最高子树的高度+1。若左右子树高度差大于1，则balance=0；若左右子树的高度差小于等于1，且左右子树都平衡时，balance=1，否则balance=0。</li></ol></li></ol><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:2;-o-tab-size:2;tab-size:2><code class=language-c data-lang=c><span style=display:flex><span><span style=color:#66d9ef>void</span> <span style=color:#a6e22e>Judge_AVL</span>(BiTree bt,<span style=color:#66d9ef>int</span> <span style=color:#f92672>&amp;</span>balance,<span style=color:#66d9ef>int</span> <span style=color:#f92672>&amp;</span>h){
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>int</span> bl <span style=color:#f92672>=</span> <span style=color:#ae81ff>0</span>, br <span style=color:#f92672>=</span> <span style=color:#ae81ff>0</span>, hl <span style=color:#f92672>=</span> <span style=color:#ae81ff>0</span>, hr <span style=color:#f92672>=</span> <span style=color:#ae81ff>0</span>; <span style=color:#75715e>//左右子树平衡标记和高度
+</span></span></span><span style=display:flex><span><span style=color:#75715e></span>    <span style=color:#66d9ef>if</span>(T <span style=color:#f92672>==</span> NULL){
+</span></span><span style=display:flex><span>        h <span style=color:#f92672>=</span> <span style=color:#ae81ff>0</span>;
+</span></span><span style=display:flex><span>        balance <span style=color:#f92672>=</span> <span style=color:#ae81ff>1</span>;
+</span></span><span style=display:flex><span>    }
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>else</span> <span style=color:#66d9ef>if</span>(T<span style=color:#f92672>-&gt;</span>lchild <span style=color:#f92672>==</span> NULL <span style=color:#f92672>&amp;&amp;</span> T<span style=color:#f92672>-&gt;</span>rchild <span style=color:#f92672>==</span> NULL){
+</span></span><span style=display:flex><span>        h <span style=color:#f92672>=</span> <span style=color:#ae81ff>1</span>;
+</span></span><span style=display:flex><span>        balance <span style=color:#f92672>=</span> <span style=color:#ae81ff>1</span>;
+</span></span><span style=display:flex><span>    }
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>else</span>{
+</span></span><span style=display:flex><span>        <span style=color:#a6e22e>Judge_AVL</span>(T<span style=color:#f92672>-&gt;</span>lchild,bl,hl);<span style=color:#75715e>//递归判断左子树
+</span></span></span><span style=display:flex><span><span style=color:#75715e></span>        <span style=color:#a6e22e>Judge_AVL</span>(T<span style=color:#f92672>-&gt;</span>rchild,br,hr);<span style=color:#75715e>//递归判断右子树
+</span></span></span><span style=display:flex><span><span style=color:#75715e></span>        h <span style=color:#f92672>=</span> (hl<span style=color:#f92672>&gt;</span>hr<span style=color:#f92672>?</span>hl:hr) <span style=color:#f92672>+</span><span style=color:#ae81ff>1</span>;
+</span></span><span style=display:flex><span>        <span style=color:#66d9ef>if</span> (<span style=color:#a6e22e>abs</span>(hl <span style=color:#f92672>-</span> hr)<span style=color:#f92672>&lt;</span><span style=color:#ae81ff>2</span><span style=color:#f92672>&gt;</span>)<span style=color:#75715e>//若字数高度差的绝对值&lt;2，则看左右子树是否都平衡
+</span></span></span><span style=display:flex><span><span style=color:#75715e></span>            balance <span style=color:#f92672>=</span> bl<span style=color:#f92672>&amp;&amp;</span>br;<span style=color:#75715e>//左右子树都平衡时，二叉树平衡
+</span></span></span><span style=display:flex><span><span style=color:#75715e></span>        <span style=color:#66d9ef>else</span>
+</span></span><span style=display:flex><span>            balance <span style=color:#f92672>=</span> <span style=color:#ae81ff>0</span>;
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>    }
+</span></span><span style=display:flex><span>}
+</span></span></code></pre></div><ol start=4><li><strong>判断给定二叉树是否二叉排序树</strong>
+对二叉排序树来说，其中序遍历为一个递增有序序列。因此对给定的二叉排序树进行遍历，始终能保持前一个值比后一个值小，则说明改二叉树时一棵二叉排序树。</li></ol><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:2;-o-tab-size:2;tab-size:2><code class=language-c data-lang=c><span style=display:flex><span>KeyType predt <span style=color:#f92672>=</span> <span style=color:#f92672>-</span><span style=color:#ae81ff>32767</span>;   <span style=color:#75715e>//predt为全局变量，保村当前结点中序前驱的值，初始值为负无穷
+</span></span></span><span style=display:flex><span><span style=color:#75715e></span><span style=color:#66d9ef>int</span> <span style=color:#a6e22e>JudgeBST</span>(BiTree bt){
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>int</span> bl,br;
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>if</span> (bt <span style=color:#f92672>==</span> NULL) <span style=color:#75715e>//空树
+</span></span></span><span style=display:flex><span><span style=color:#75715e></span>        <span style=color:#66d9ef>return</span> <span style=color:#ae81ff>1</span>;
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>else</span> {
+</span></span><span style=display:flex><span>        bl <span style=color:#f92672>=</span> <span style=color:#a6e22e>JudgeBST</span>(bt <span style=color:#f92672>-&gt;</span> lchild);
+</span></span><span style=display:flex><span>        <span style=color:#66d9ef>if</span>(bl <span style=color:#f92672>==</span> <span style=color:#ae81ff>0</span> <span style=color:#f92672>||</span> predt <span style=color:#f92672>&gt;=</span> bt<span style=color:#f92672>-&gt;</span>date)
+</span></span><span style=display:flex><span>            <span style=color:#66d9ef>return</span> <span style=color:#ae81ff>0</span>;
+</span></span><span style=display:flex><span>        predt  <span style=color:#f92672>=</span> bt<span style=color:#f92672>-&gt;</span>data;
+</span></span><span style=display:flex><span>        br <span style=color:#f92672>=</span> <span style=color:#a6e22e>JudgeBST</span>(bt <span style=color:#f92672>-&gt;</span> rchild);
+</span></span><span style=display:flex><span>        <span style=color:#66d9ef>return</span> br;
+</span></span><span style=display:flex><span>    }
+</span></span><span style=display:flex><span>}
+</span></span></code></pre></div><ul><li>思路2：用先序遍历，每处理一个一个结点，对比其根节点与左右节点的值。</li></ul><h2 id=part4-图>part4 图</h2><h3 id=41图的遍历>4.1图的遍历</h3><ol><li><strong>深度优先遍历DFS</strong>
+基本思想：首先从图中某个顶点 v0 出发，访问此顶点，然后依次从 v0 相邻的顶点出发
+深度优先遍历，直至图中所有与 v0 路径相通的顶点都被访问了；若此时尚有顶点未被访问，
+则从中选一个顶点作为起始点，重复上述过程，直到所有的顶点都被访问。可以看出深度优
+先遍历是一个递归的过程。这种遍历过程类似树的先序遍历，均是先访问 节点 ，再从该 节点
+出发继续向下遍历。</li></ol><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:2;-o-tab-size:2;tab-size:2><code class=language-c data-lang=c><span style=display:flex><span><span style=color:#75715e>//伪代码
+</span></span></span><span style=display:flex><span><span style=color:#75715e></span><span style=color:#66d9ef>bool</span> visited[Max_Vex];<span style=color:#75715e>// 定义访问标记数组，为了防止重复访问
+</span></span></span><span style=display:flex><span><span style=color:#75715e></span><span style=color:#66d9ef>void</span> <span style=color:#a6e22e>DFSTraverse</span>(Graph G){
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>for</span>(v<span style=color:#f92672>=</span><span style=color:#ae81ff>0</span>;v <span style=color:#f92672>&lt;</span>G.vexnum;v<span style=color:#f92672>++</span>)
+</span></span><span style=display:flex><span>        visited[v]<span style=color:#f92672>=</span>false;<span style=color:#75715e>// 初始化标记数组
+</span></span></span><span style=display:flex><span><span style=color:#75715e></span>    <span style=color:#66d9ef>for</span> (v<span style=color:#f92672>=</span><span style=color:#ae81ff>0</span>;v<span style=color:#f92672>&lt;</span>G.vexnum;<span style=color:#f92672>++</span>
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>if</span>(<span style=color:#f92672>!</span>visited[v])
+</span></span><span style=display:flex><span>    <span style=color:#960050;background-color:#1e0010>如果</span> v <span style=color:#960050;background-color:#1e0010>未被访问，那么从</span> v <span style=color:#960050;background-color:#1e0010>起，开始做深度优先遍历</span>
+</span></span><span style=display:flex><span>    <span style=color:#a6e22e>DFS</span>(G,v);
+</span></span><span style=display:flex><span>}
+</span></span><span style=display:flex><span><span style=color:#66d9ef>void</span> <span style=color:#a6e22e>DFS</span>(Graph G,<span style=color:#66d9ef>int</span> v){
+</span></span><span style=display:flex><span>    <span style=color:#a6e22e>visit</span>(v);
+</span></span><span style=display:flex><span>    visited[v]<span style=color:#f92672>=</span>true; <span style=color:#75715e>//定义为已访问
+</span></span></span><span style=display:flex><span><span style=color:#75715e></span>    <span style=color:#66d9ef>for</span> (w<span style=color:#f92672>=</span><span style=color:#a6e22e>FirstNeighbor</span>(G,v);w<span style=color:#f92672>&gt;=</span><span style=color:#ae81ff>0</span>;w<span style=color:#f92672>=</span><span style=color:#a6e22e>NextNeighbor</span>(G,v,w))
+</span></span><span style=display:flex><span>        <span style=color:#66d9ef>if</span>(<span style=color:#f92672>!</span> visited[w])
+</span></span><span style=display:flex><span>            <span style=color:#a6e22e>DFS</span>(G,w);
+</span></span><span style=display:flex><span>}
+</span></span></code></pre></div><ol start=2><li><strong>广度优先遍历</strong></li></ol><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:2;-o-tab-size:2;tab-size:2><code class=language-c data-lang=c><span style=display:flex><span><span style=color:#66d9ef>bool</span> visited[Max_Vex];<span style=color:#75715e>// 定义访问 标记数组
+</span></span></span><span style=display:flex><span><span style=color:#75715e></span><span style=color:#66d9ef>void</span> <span style=color:#a6e22e>BFSTraverse</span>(Graph G){
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>for</span>( i <span style=color:#f92672>=</span><span style=color:#ae81ff>0</span>;i<span style=color:#f92672>&lt;</span>G.vexnum;<span style=color:#f92672>++</span>i)
+</span></span><span style=display:flex><span>    visited[v]<span style=color:#f92672>=</span>false;<span style=color:#75715e>// 初始化标记数组
+</span></span></span><span style=display:flex><span><span style=color:#75715e></span>    <span style=color:#a6e22e>InitQueue</span>(Q);<span style=color:#75715e>//初始化队列
+</span></span></span><span style=display:flex><span><span style=color:#75715e></span>    <span style=color:#66d9ef>for</span> (v<span style=color:#f92672>=</span><span style=color:#ae81ff>0</span>;v<span style=color:#f92672>&lt;</span>G.vexnum;<span style=color:#f92672>++</span>v)
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>if</span>(<span style=color:#f92672>!</span>visited[v])<span style=color:#75715e>//如果 v 未被访问，那么从 v 起，开始做广度优先遍历
+</span></span></span><span style=display:flex><span><span style=color:#75715e></span>    <span style=color:#a6e22e>BFS</span>(G,v);
+</span></span><span style=display:flex><span>}
+</span></span><span style=display:flex><span><span style=color:#66d9ef>void</span> <span style=color:#a6e22e>BFS</span>(Graph G,<span style=color:#66d9ef>int</span> v){
+</span></span><span style=display:flex><span>    <span style=color:#a6e22e>visit</span>(v);
+</span></span><span style=display:flex><span>    visited[v]<span style=color:#f92672>=</span>true;<span style=color:#75715e>// 定义为已访问
+</span></span></span><span style=display:flex><span><span style=color:#75715e></span>    <span style=color:#66d9ef>while</span>(<span style=color:#f92672>!</span><span style=color:#a6e22e>isEmpty</span>(Q)){
+</span></span><span style=display:flex><span>    <span style=color:#a6e22e>DeQueue</span>(Q,v);<span style=color:#75715e>//顶点v出队列
+</span></span></span><span style=display:flex><span><span style=color:#75715e></span>    <span style=color:#66d9ef>for</span> (w<span style=color:#f92672>=</span><span style=color:#a6e22e>FirstNeighbor</span>(G,v);w<span style=color:#f92672>&gt;=</span><span style=color:#ae81ff>0</span>;w<span style=color:#f92672>=</span><span style=color:#a6e22e>NextNeighbor</span>(G,v,w))
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>if</span>(<span style=color:#f92672>!</span>visited[w]){
+</span></span><span style=display:flex><span>        <span style=color:#a6e22e>visit</span>(w);
+</span></span><span style=display:flex><span>        visited[w]<span style=color:#f92672>=</span>true;
+</span></span><span style=display:flex><span>        <span style=color:#a6e22e>EnQueue</span>(Q,w);<span style=color:#75715e>//顶点w入队
+</span></span></span><span style=display:flex><span><span style=color:#75715e></span>}<span style=color:#75715e>//if
+</span></span></span><span style=display:flex><span><span style=color:#75715e></span>}<span style=color:#75715e>//while
+</span></span></span><span style=display:flex><span><span style=color:#75715e></span>}
+</span></span></code></pre></div><h2 id=part5-查找排序>part5 查找、排序</h2></div><footer class=post-footer><div class=post-tags><a href=/tags/></a><a href=/tags/></a></div><div class=addthis_inline_share_toolbox style=text-align:center></div><hr><div class=post-copyright><img src=/imgs/cc/cc.svg width=75 height=75 align=right><ul><li class=post-copyright-title><strong>文章标题：</strong>
+Datastruct</li><li class=post-copyright-author><strong>本文作者：</strong>
+mryohohoho</li><li class=post-copyright-link><strong>本文链接：</strong>
+<a id=post-cr-link href=http://mryohohoho.github.io/me/post/datastruct/ title=Datastruct>http://mryohohoho.github.io/me/post/datastruct/</a></li><li class=post-copyright-license><strong>版权声明：</strong>
+本博客所有文章除特别声明外，均采用 <i class="fab fa-fw fa-creative-commons"></i><a target=_blank href=https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh>BY-NC-SA</a> 许可协议。转载请注明出处！</li></ul></div><div class=followme><span>欢迎关注我的其它发布渠道</span><div class=social-list><div class=social-item><a target=_blank class=social-link href=/images/wechat_channel.jpg><span class=icon><i class="fab fa-weixin"></i></span>
+<span class=label>WeChat</span></a></div><div class=social-item><a target=_blank class=social-link href=/atom.xml><span class=icon><i class="fa fa-rss"></i></span>
+<span class=label>RSS</span></a></div></div></div><div class=post-nav><div class="post-nav-next post-nav-item"></div><div class="post-nav-prev post-nav-item"></div></div></footer></article></div></div></main><footer class=footer><div class=footer-inner><div id=gtranslate class=google-translate><i class="fa fa-language"></i><div id=google_translate_element></div></div><div class=copyright>&copy;
+<span itemprop=copyrightYear>2023</span>
+<span class=with-love><i class="fa fa-heart"></i></span>
+<span class=author itemprop=copyrightHolder>mryohohoho</span></div><div class=powered-by>由 <a href=https://gohugo.io title=0.111.2 target=_blank>Hugo</a> & <a href=https://github.com/hugo-next/hugo-theme-next title=4.4.1 target=_blank>Hugo NexT.Gemini</a> 强力驱动</div></div></footer><script type=text/javascript src=https://cdn.staticfile.org/animejs/3.2.1/anime.min.js defer></script>
+<script type=text/javascript src=https://cdn.staticfile.org/viewerjs/1.11.0/viewer.min.js defer></script>
+<script class=next-config data-name=main type=application/json>{"bookmark":{"color":"#222","enable":true,"save":"manual"},"busuanzi":{"pageview":true},"copybtn":true,"darkmode":false,"giscus":{"cfg":{"category":"Comments","categoryid":null,"emit":false,"inputposition":"top","mapping":"title","reactions":false,"repo":"username/repo-name","repoid":null,"theme":"preferred_color_scheme"},"js":"https://giscus.app/client.js"},"hostname":"http://mryohohoho.github.io/me/","i18n":{"ds_day":" 天前","ds_days":" 天 ","ds_hour":" 小时前","ds_hours":" 小时 ","ds_just":"刚刚","ds_min":" 分钟前","ds_mins":" 分钟","ds_month":" 个月前","ds_years":" 年 ","empty":"没有找到任何搜索结果：${query}","hits":"","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","placeholder":"搜索..."},"lang":"zh-CN","lazyload":false,"localSearch":{"enable":true,"path":"/searchindexes.xml","preload":false,"topnperarticle":-1,"trigger":"auto","unescape":false},"motion":{"async":true,"enable":true,"transition":{"collheader":"fadeInLeft","postblock":"fadeIn","postbody":"fadeInDown","postheader":"fadeInDown","sidebar":"fadeInUp"}},"root":"/","scheme":"Gemini","sidebar":{"display":"post","offset":12,"padding":18,"position":"left","width":256},"statis":{"enable":true,"plugin":"busuanzi"},"vendor":{"plugins":"qiniu","router":"https://cdn.staticfile.org"},"version":"4.4.1","waline":{"cfg":{"comment":true,"emoji":false,"imguploader":false,"pageview":true,"placeholder":"请文明发言哟 ヾ(≧▽≦*)o","reaction":true,"reactiontext":["点赞","踩一下","得意","不屑","尴尬","睡觉"],"reactiontitle":"你认为这篇文章怎么样？","requiredmeta":["nick","mail"],"serverurl":"https://walinejs.comment.lithub.cc","sofa":"快来发表你的意见吧 (≧∀≦)ゞ","wordlimit":200},"css":{"alias":"waline","file":"dist/waline.css","name":"@waline/client","version":"2.13.0"},"js":{"alias":"waline","file":"dist/waline.js","name":"@waline/client","version":"2.13.0"}}}</script><script type=text/javascript src=/me/js/main.min.37028fbafbd97fd89808b4c7b5a3a81f01ed0ab24001d273d774f9546a0e9170.js defer></script></body></html>
